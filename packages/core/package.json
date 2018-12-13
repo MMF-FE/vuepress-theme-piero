@@ -1,0 +1,26 @@
+{
+    "name": "@yzfe/vuepress-theme-piero-core",
+    "version": "0.0.1",
+    "description": "the lib for theme piero",
+    "main": "lib/index.js",
+    "types": "typings/index.d.ts",
+    "author": "minfive <chenxiaowu1994@outlook.com> (http://blog.minfive.com)",
+    "license": "MIT",
+    "private": false,
+    "scripts": {
+        "alias": "node ./scripts/process-ts-config",
+        "svg": "vsvg -s ./lib/icons -t ./lib/common/icons --ext js --es6"
+    },
+    "dependencies": {
+        "@yzfe/vuepress-plugin-flexsearch": "^0.0.1",
+        "@yzfe/vuepress-plugin-markdown": "^0.0.1",
+        "@yzfe/vuepress-plugin-postcss": "^0.0.1",
+        "@yzfe/vuepress-plugin-typescript": "^0.0.1",
+        "date-fns": "^1.29.0",
+        "medium-zoom": "^1.0.4",
+        "vue": "^2.5.17",
+        "vue-property-decorator": "^7.2.0",
+        "vue-svgicon": "^3.2.1",
+        "vuepress": "^1.0.0-alpha.47"
+    }
+}

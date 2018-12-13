@@ -1,0 +1,77 @@
+/* @import './var.pcss'; */
+
+#app {
+    overflow: hidden;
+    padding: 0 calc(var(--layoutBlankSize) / 2);
+    background-color: #fff;
+}
+
+.btn {
+    padding: 0 19px;
+    border: 2px solid currentColor;
+    background-color: transparent;
+    border-radius: 30px;
+    color: #fff;
+    font-size: 12px;
+    letter-spacing: 0;
+    line-height: 44px;
+    text-decoration: none;
+    text-shadow: none;
+    transition: all 0.3s linear;
+    white-space: normal;
+
+    &:hover {
+        color: var(--themeColor);
+    }
+}
+
+.loading {
+    width: 36px;
+    height: 36px;
+    animation: loading-rotate 2s linear infinite;
+    fill: none;
+    stroke: currentColor;
+
+    .path {
+        animation: loading-dash 1.5s ease-in-out infinite;
+        stroke: var(--themeColor);
+        stroke-dasharray: 90, 150;
+        stroke-dashoffset: 0;
+        stroke-linecap: round;
+        stroke-width: 2;
+    }
+}
+
+.ellipsis {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.medium-zoom-overlay,
+.medium-zoom-image {
+    z-index: var(--zIndexTop);
+}
+
+@keyframes loading-rotate {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes loading-dash {
+    0% {
+        stroke-dasharray: 1, 200;
+        stroke-dashoffset: 0;
+    }
+
+    50% {
+        stroke-dasharray: 90, 150;
+        stroke-dashoffset: -40px;
+    }
+
+    100% {
+        stroke-dasharray: 90, 150;
+        stroke-dashoffset: -120px;
+    }
+}

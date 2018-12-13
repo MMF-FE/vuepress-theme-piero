@@ -1,0 +1,13 @@
+{
+    "name": "example-doc",
+    "version": "0.0.1",
+    "description": "the example for theme-doc",
+    "main": "index.js",
+    "author": "minfive <chenxiaowu1994@outlook.com> (http://blog.minfive.com/)",
+    "license": "MIT",
+    "private": true,
+    "dependencies": {
+        "@yzfe/vuepress-theme-piero-doc": "^0.0.1",
+        "vuepress": "^1.0.0-alpha.47"
+    }
+}

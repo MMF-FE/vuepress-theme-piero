@@ -1,0 +1,4 @@
+{
+    "extends": "./node_modules/@yzfe/vuepress-plugin-typescript/tsconfig",
+    "include": ["scripts/*.ts"]
+}

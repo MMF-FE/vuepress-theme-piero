@@ -1,0 +1,26 @@
+{
+    "name": "@yzfe/vuepress-plugin-typescript",
+    "version": "0.0.1",
+    "description": "the typescript plugin for vuepress",
+    "main": "dist/index.js",
+    "types": "typings/index.d.ts",
+    "author": "minfive <chenxiaowu1994@outlook.com> (http://blog.minfive.com/)",
+    "license": "MIT",
+    "private": false,
+    "dependencies": {
+        "ts-loader": "^5.3.1",
+        "typescript": "^3.1.6",
+        "webpack-chain": "^5.2.4"
+    },
+    "scripts": {
+        "build": "rm -rf dist && tsc -p ./tsconfig.build.json",
+        "dev": "rm -rf dist && tsc -w -p ./tsconfig.build.json"
+    },
+    "devDependencies": {
+        "@types/node": "^10.12.12",
+        "@types/webpack": "^4.4.27",
+        "@types/webpack-chain": "^5.2.0",
+        "typescript": "^3.2.1",
+        "webpack": "^4.30.0"
+    }
+}

@@ -1,0 +1,30 @@
+.sider-search-form {
+    --siderSearchHeight: 45px;
+}
+
+.search {
+    &__input-wrap {
+        position: relative;
+    }
+
+    &__input {
+        width: 100%;
+        height: var(--siderSearchHeight);
+        padding: 10px 20px;
+        padding-right: calc(16px + (var(--siderSearchHeight) - 16px));
+        padding-left: 20px;
+        margin: 0;
+        border: 1px solid var(--borderColor);
+        background: #fff;
+        color: var(--themeColor--auxiliary-2);
+        line-height: calc(var(--siderSearchHeight) - 2 * 10px);
+    }
+
+    &__icon {
+        position: absolute;
+        top: 50%;
+        right: calc((var(--siderSearchHeight) - 16px) / 2);
+        color: var(--themeColor--auxiliary-2);
+        transform: translateY(-50%);
+    }
+}

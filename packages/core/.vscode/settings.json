@@ -1,0 +1,36 @@
+{
+    "editor.formatOnSave": true,
+    "[javascript]": {
+        "editor.formatOnSave": false
+    },
+    "[vue]": {
+        "editor.formatOnSave": false
+    },
+    "[typescript]": {
+        "editor.formatOnSave": false
+    },
+    "eslint.autoFixOnSave": true,
+    "eslint.validate": [
+        { "language": "javascript", "autoFix": true },
+        { "language": "typescript", "autoFix": true },
+        { "language": "vue", "autoFix": true },
+        { "language": "html", "autoFix": true }
+    ],
+    "typescript.tsserver.log": "verbose",
+    "prettier.requireConfig": true,
+    "prettier.stylelintIntegration": true,
+    "vetur.format.options.tabSize": 4,
+    "files.associations": {
+        "*.vue": "vue"
+    },
+    "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/CVS": true,
+        "**/.DS_Store": true,
+        "**/*.map": true,
+        "**/node_modules": true,
+        "packages": true
+    }
+}

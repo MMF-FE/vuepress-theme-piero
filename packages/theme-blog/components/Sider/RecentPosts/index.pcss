@@ -1,0 +1,58 @@
+.pr-sider-posts {
+    &__list {
+        margin-bottom: calc(var(--layoutBlankSize) / -3);
+    }
+
+    &__item {
+        margin-bottom: calc(var(--layoutBlankSize) / 3);
+
+        &:hover {
+            .sider-post__cover img {
+                transform: translateX(-50%) scale(1.2);
+            }
+        }
+    }
+}
+
+.sider-post {
+    display: flex;
+    align-items: center;
+    font-size: inherit;
+    text-decoration: none;
+
+    &__cover {
+        position: relative;
+        overflow: hidden;
+        width: 25%;
+        padding-top: 25%;
+        margin-right: calc(var(--layoutBlankSize) / 2);
+
+        & > img {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            display: block;
+            width: auto;
+            height: 100%;
+            transform: translateX(-50%);
+            transition: transform 0.3s;
+        }
+    }
+
+    &__desc {
+        flex: 1 0 0;
+        line-height: 1;
+    }
+
+    &__title {
+        overflow: hidden;
+        margin: 0;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    &__date {
+        margin: 5px 0 0;
+        font-size: var(--otherFontSize);
+    }
+}

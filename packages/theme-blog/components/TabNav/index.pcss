@@ -1,0 +1,42 @@
+@import "var.pcss";
+
+.pr-tab-nav {
+    margin-bottom: var(--layoutBlankSize);
+
+    .nav {
+        &__list {
+            display: flex;
+            flex-wrap: wrap;
+            margin-bottom: -10px;
+        }
+
+        &__item {
+            display: block;
+            padding: 0 15px;
+            margin: 0 5px 10px;
+            border: 2px solid transparent;
+            border-radius: 32px;
+            color: var(--themeColor--auxiliary-2);
+            cursor: pointer;
+            font-size: var(--mainFontSize);
+            font-weight: 300;
+            line-height: 32px;
+            text-decoration: none;
+            text-transform: capitalize;
+            transition: all 0.3s linear;
+
+            .pr-link {
+                text-decoration: none;
+            }
+
+            &--actived,
+            &:hover {
+                border-color: var(--themeColor--auxiliary-2);
+
+                .pr-link {
+                    color: var(--themeColor--auxiliary-2);
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,20 @@
+.list-transition-group {
+    position: relative;
+
+    /deep/ {
+        .list-item,
+        .list-enter-active,
+        .list-leave-active {
+            transition: all 0.6s ease-out;
+        }
+
+        .list-enter {
+            opacity: 0;
+            transform: scale(0.6);
+        }
+
+        .list-leave-to {
+            opacity: 0;
+        }
+    }
+}

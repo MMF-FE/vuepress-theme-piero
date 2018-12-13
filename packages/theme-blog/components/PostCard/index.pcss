@@ -1,0 +1,181 @@
+@import "var.pcss";
+
+.pr-post-card {
+    background-color: var(--themeColor--auxiliary-1);
+
+    &__header {
+        position: relative;
+        display: block;
+        overflow: hidden;
+        width: 100%;
+        padding-top: calc((100% / 3) * 2);
+
+        &::after {
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: block;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.6);
+            content: "";
+            opacity: 0;
+            transition: opacity 0.3s linear;
+        }
+    }
+
+    &__cover {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: auto;
+        height: 100%;
+        transform: translate(-50%, -50%);
+    }
+
+    &__cat {
+        position: absolute;
+        z-index: 1;
+        top: 20px;
+        left: 0;
+        padding: 1px 15px;
+        background-color: var(--themeColor--auxiliary-2);
+        font-size: var(--titleFontSize--mini);
+        text-decoration: none;
+    }
+
+    &__readmore {
+        position: absolute;
+        z-index: 1;
+        top: 50%;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        transform: translateY(-50%);
+
+        .readmore {
+            &__btn {
+                display: inline-flex;
+                align-items: center;
+                padding: 15px 28px;
+                margin: 0;
+                border: 2px solid var(--themeColor);
+                background: transparent;
+                color: var(--themeColor);
+                font-size: var(--titleFontSize--mini);
+                font-style: normal;
+                font-weight: var(--titleFontWidth--medium);
+                letter-spacing: 1px;
+                line-height: 1;
+                opacity: 0;
+                text-decoration: none;
+                text-transform: uppercase;
+                transform: translateX(100%);
+                visibility: hidden;
+
+                &:hover {
+                    background-color: var(--themeColor);
+                    color: #fff;
+                }
+            }
+
+            &__icon {
+                width: var(--titleFontSize--mini);
+                height: var(--titleFontSize--mini);
+            }
+        }
+    }
+
+    &__info {
+        padding: 25px;
+    }
+
+    &__title {
+        .pr-link {
+            font-size: var(--titleFontSize--small);
+            line-height: calc(var(--titleFontSize--small) + 4px);
+            text-decoration: none;
+        }
+    }
+
+    &__other-info {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+        line-height: 1;
+
+        .other-info {
+            &__column {
+                & + & {
+                    &::before {
+                        display: inline-block;
+                        margin: 0 10px;
+                        content: "|";
+                    }
+                }
+            }
+        }
+    }
+
+    &__date {
+        margin: 0;
+        font-size: var(--otherFontSize);
+    }
+
+    &__author {
+        overflow: hidden;
+        flex: 1 0 0;
+        margin-left: 10px;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+
+        .author {
+            &__name {
+                text-decoration: none;
+            }
+        }
+    }
+
+    &__desc {
+        display: -webkit-box;
+        overflow: hidden;
+        height: calc(26px * 3);
+        margin: 0 0 10px;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 3;
+        text-overflow: ellipsis;
+    }
+
+    &__text-readmore {
+        color: var(--titleFontColor);
+        line-height: 1;
+
+        .text-readmore {
+            &__btn {
+                display: inline-flex;
+                align-items: center;
+                text-decoration: none;
+            }
+
+            &__icon {
+                width: calc(var(--otherFontSize) * 3 / 4);
+                height: calc(var(--otherFontSize) * 3 / 4);
+                margin-left: 5px;
+            }
+        }
+    }
+
+    &:hover {
+        .pr-post-card__header::after {
+            opacity: 1;
+        }
+
+        .readmore {
+            &__btn {
+                opacity: 1;
+                transform: translateX(0);
+                visibility: visible;
+            }
+        }
+    }
+}

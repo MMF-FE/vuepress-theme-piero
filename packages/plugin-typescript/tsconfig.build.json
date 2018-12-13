@@ -1,0 +1,15 @@
+{
+    "extends": "./tsconfig",
+    "compilerOptions": {
+        "module": "commonjs",
+        "baseUrl": "./src",
+        "outDir": "./dist",
+        "typeRoots": [
+            "typings"
+        ]
+    },
+    "include": [
+        "src/*.ts",
+        "typings/*.ts"
+    ]
+}

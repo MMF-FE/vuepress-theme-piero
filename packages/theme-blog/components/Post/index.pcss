@@ -1,0 +1,320 @@
+@import "var.pcss";
+
+.pr-post {
+    &__cover {
+        .pr-image {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    &__header {
+        padding-bottom: 30px;
+        margin: 60px 0 30px;
+        border-bottom: 1px solid var(--borderColor);
+    }
+
+    &__title {
+        margin: 0.5em 0;
+        color: var(--titleFontColor);
+        font-size: 2em;
+    }
+
+    &__mark {
+        display: flex;
+        flex-wrap: wrap;
+        color: var(--titleFontColor);
+
+        .mark__text {
+            font-family: var(--titleFontFamily);
+            font-size: var(--otherFontSize);
+            font-weight: normal;
+            text-decoration: none;
+        }
+    }
+
+    &__content {
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+
+        /deep/ {
+            h1 {
+                font-size: 2em;
+            }
+
+            h2 {
+                font-size: 1.8em;
+            }
+
+            h3 {
+                font-size: 1.6em;
+            }
+
+            h4 {
+                font-size: 1.4em;
+            }
+
+            h5 {
+                font-size: 1.2em;
+            }
+
+            h6 {
+                font-size: 1em;
+            }
+
+            a,
+            abbr,
+            acronym,
+            address,
+            applet,
+            big,
+            blockquote,
+            body,
+            caption,
+            cite,
+            dd,
+            del,
+            dfn,
+            div,
+            dl,
+            dt,
+            em,
+            fieldset,
+            form,
+            h1,
+            h2,
+            h3,
+            h4,
+            h5,
+            h6,
+            html,
+            iframe,
+            img,
+            ins,
+            kbd,
+            label,
+            legend,
+            li,
+            object,
+            ol,
+            p,
+            pre,
+            q,
+            s,
+            samp,
+            small,
+            span,
+            strike,
+            strong,
+            sub,
+            sup,
+            table,
+            tbody,
+            td,
+            tfoot,
+            th,
+            thead,
+            tr,
+            tt,
+            ul,
+            var {
+                padding: 0;
+                margin: 0;
+                border: 0;
+                font-family: inherit;
+                outline: 0;
+                vertical-align: baseline;
+            }
+
+            h1,
+            h2,
+            h3,
+            h4,
+            h5,
+            h6,
+            blockquote,
+            p,
+            img,
+            ul,
+            ol,
+            dl,
+            pre,
+            div[class*="language-"] {
+                margin: 0;
+                border: 0;
+                outline: none;
+
+                &:not(:last-child) {
+                    margin-bottom: 15px;
+                }
+            }
+
+            h1,
+            h2,
+            h3,
+            h4,
+            h5,
+            h6 {
+                margin-top: calc(var(--otherFontSize) * 2.5);
+                color: var(--titleFontColor);
+                font-weight: 400;
+                line-height: initial;
+            }
+
+            ul,
+            ol,
+            dl {
+                padding-left: 1.5em;
+                list-style: initial;
+            }
+
+            ol {
+                list-style: decimal;
+            }
+
+            blockquote {
+                position: relative;
+                overflow: hidden;
+                padding: 20px;
+                border-left: 8px solid #e4e4e4;
+                background-color: #f7f7f7;
+            }
+
+            a {
+                color: var(--themeColor);
+                text-decoration: none;
+                transition: color 0.3s;
+
+                &:hover,
+                &:active {
+                    color: var(--themeColor--hover);
+                    text-decoration: underline;
+                }
+            }
+
+            div[class*="language-"] {
+                position: relative;
+                overflow: auto;
+                background-color: #f7f7f7;
+                -webkit-overflow-scrolling: touch;
+
+                &::before {
+                    position: absolute;
+                    z-index: 3;
+                    top: 0.8em;
+                    right: 1em;
+                    display: block;
+                    content: attr(data-language);
+                    font-size: 0.75rem;
+                    text-transform: capitalize;
+                }
+
+                & > pre {
+                    position: relative;
+                    z-index: 2;
+                    padding-left: 3em;
+                    margin-bottom: 0;
+                    font-size: 12px;
+
+                    & > code {
+                        overflow: auto;
+                        padding: 1em 0.5em;
+                        background-color: transparent;
+                        font-size: 12px;
+                        line-height: 1.7em;
+                    }
+                }
+
+                .line-numbers-wrapper {
+                    position: absolute;
+                    z-index: 1;
+                    top: 0;
+                    left: 0;
+                    min-width: 2.8em;
+                    height: 100%;
+                    padding: 1em 0.5em;
+                    color: #c6cdc1;
+                    font-family: SFMono-Regular, Consolas, "Liberation Mono",
+                        Menlo, Courier, monospace;
+                    font-size: 12px;
+                    line-height: 1.7em;
+                    text-align: right;
+                }
+
+                .highlight-lines {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    overflow: auto;
+                    width: 100%;
+                    padding: 1em 0;
+                    font-size: 12px;
+                    line-height: 1.7em;
+                    user-select: none;
+
+                    .highlighted {
+                        background-color: rgba(0, 0, 0, 0.1);
+                    }
+                }
+            }
+
+            pre {
+                overflow: auto;
+                -webkit-overflow-scrolling: touch;
+            }
+
+            & > pre > code {
+                padding: 1em;
+                font-size: inherit;
+            }
+
+            code {
+                padding: 0.2em 0.4em;
+                background-color: #f7f7f7;
+                background-color: rgba(27, 31, 35, 0.05);
+                border-radius: 3px;
+                font-family: SFMono-Regular, Consolas, "Liberation Mono", Menlo,
+                    Courier, monospace;
+                font-size: 85%;
+                vertical-align: middle;
+                word-break: break-all;
+            }
+
+            hr {
+                margin: 1.5em 0;
+                border: 0;
+                border-top: 1px solid #e4e4e4;
+            }
+
+            img {
+                max-width: 100%;
+
+                &:not(:last-child) {
+                    margin-bottom: 10px;
+                }
+            }
+
+            table {
+                width: 100%;
+                border: 1px solid var(--borderColor);
+                border-collapse: collapse;
+
+                th {
+                    font-weight: 700;
+                }
+
+                th,
+                td {
+                    padding: 0.5em;
+                    border: 1px solid #ddd;
+                    text-align: left;
+                }
+
+                tbody > tr:nth-child(2n + 1) > td {
+                    background-color: rgba(102, 128, 153, 0.05);
+                }
+            }
+        }
+    }
+}

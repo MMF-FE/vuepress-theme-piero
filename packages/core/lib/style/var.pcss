@@ -1,0 +1,46 @@
+@custom-media --viewport-default screen and (width > 1280px);
+@custom-media --viewport-medium screen and (width <= 1280px) and (width > 992px);
+@custom-media --viewport-small screen and (width <= 992px) and (width > 768px);
+@custom-media --viewport-mini screen and (width <= 768px);
+@custom-media --viewport-phone screen and (width <= 450px);
+@custom-media --viewport-small-mini screen and (width <= 992px);
+@custom-media --viewport-mini-phone screen and (width <= 768px) and (width > 450px);
+
+/* 主题变量 */
+:root {
+    --themeColor: #5bd7c5; /* 主题色 */
+    --themeColor--hover: #8ce3d6; /* 主题亮色 */
+    --themeColor--auxiliary-1: #f7f7f7; /* 辅助色-银灰 */
+    --themeColor--auxiliary-2: #111; /* 辅助色-黑色 */
+    --themeColor--auxiliary-3: #ddd; /* 辅助色-浅灰色 */
+    --themeColor--auxiliary-4: #24292e; /* 辅助色-灰色 */
+    --borderWidth: 1px; /* 默认边框宽度 */
+    --borderColor: #eee; /* 默认边框颜色 */
+
+    /* 字体 */
+    --mainFontFamily: '"Open Sans"'; /* 主体内容字体 */
+    --mainFontColor: var(--themeColor--auxiliary-4); /* 主体内容字色 */
+    --mainFontWidth: 300; /* 主体内容字粗 */
+    --mainFontLineHeight: 26px; /* 主体内容行高 */
+    --mainFontSize: 14px; /* 主体内容字号 */
+    --titleFontFamily: "Montserrat"; /* 着重内容字体 */
+    --titleFontColor: var(--themeColor--auxiliary-2); /* 着重内容字色 */
+    --titleFontWidth: 600; /* 着重内容字粗 */
+    --titleFontWidth--medium: 400; /* 着重内容中等字粗 */
+    --titleFontSize: 24px; /* 着重内容字号 */
+    --titleFontSize--medium: 20px; /* 着重内容中等字号 */
+    --titleFontSize--small: 16px; /* 着重内容小字号 */
+    --titleFontSize--mini: 12px; /* 着重内容超小字号 */
+    --otherFontSize: 13px; /* 其它内容字号 */
+    --layoutBlankSize: 30px; /* 布局留白 */
+
+    /* 层级 */
+    --zIndexBottom: 1; /* 最低级 */
+    --zIndexCenter: 5; /* 中级 */
+    --zIndexTop: 9; /* 顶级 */
+    --zIndexSuper: 99; /* 超级 */
+
+    /* 局部背景色 */
+    --headerBgColor: #fff; /* header */
+    --footerBgColor: #666; /* footer */
+}

@@ -1,0 +1,49 @@
+@import "var.pcss";
+
+.pr-post-dirctory {
+    padding: 25px 0;
+    border: var(--borderWidth) solid var(--borderColor);
+
+    &__list {
+    }
+
+    &__item {
+        overflow: hidden;
+        padding-right: 15px;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+
+        &--actived {
+            border-left: 3px solid var(--themeColor--hover);
+            color: var(--themeColor--hover);
+        }
+
+        &--level1 {
+            padding-left: 30px;
+        }
+
+        &--level2 {
+            padding-left: 45px;
+        }
+
+        &--level3 {
+            padding-left: 60px;
+        }
+
+        &--level4 {
+            padding-left: 75px;
+        }
+
+        &--level5 {
+            padding-left: 90px;
+        }
+
+        &--level6 {
+            padding-left: 105px;
+        }
+
+        .pr-link {
+            text-decoration: none;
+        }
+    }
+}

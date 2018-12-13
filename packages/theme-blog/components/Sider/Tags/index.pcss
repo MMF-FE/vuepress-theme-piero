@@ -1,0 +1,37 @@
+.pr-sider-tags {
+    --siderTagMargin: 10px;
+
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        margin-right: calc(var(--siderTagMargin) * -1);
+        margin-bottom: calc(var(--siderTagMargin) / -2);
+    }
+
+    &__item {
+        max-width: calc(100% - var(--siderTagMargin));
+        margin-right: var(--siderTagMargin);
+        margin-bottom: calc(var(--siderTagMargin) / 2);
+
+        .pr-link {
+            display: block;
+            overflow: hidden;
+            height: 36px;
+            border: 0;
+            background-color: #ccc;
+            border-radius: 36px;
+            color: #fff;
+            font-size: inherit;
+            line-height: 36px;
+            padding-inline: 15px;
+            text-decoration: none;
+            text-overflow: ellipsis;
+            text-transform: capitalize;
+            white-space: nowrap;
+
+            &:hover {
+                background-color: var(--themeColor);
+            }
+        }
+    }
+}

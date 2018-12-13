@@ -1,0 +1,76 @@
+@import "var.pcss";
+
+.pr-footer {
+    &__top {
+        --footerTopBgc: var(--themeColor--auxiliary-2);
+
+        position: relative;
+        display: grid;
+        padding: 80px 0;
+        background-color: var(--footerTopBgc);
+        color: #fff;
+        grid-gap: var(--layoutBlankSize);
+        grid-template-areas: "introduction contace posts links";
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: auto;
+
+        &:matches(::after, ::before) {
+            position: absolute;
+            z-index: 2;
+            top: 0;
+            display: block;
+            width: calc(50vw - 50% + 1px);
+            height: 100%;
+            background-color: var(--footerTopBgc);
+            content: "";
+        }
+
+        &::before {
+            left: 100%;
+        }
+
+        &::after {
+            right: 100%;
+        }
+    }
+
+    &__introduction {
+        grid-area: introduction;
+    }
+
+    &__contace {
+        grid-area: contace;
+    }
+
+    &__blog-posts {
+        grid-area: posts;
+    }
+
+    &__firend-links {
+        grid-area: links;
+    }
+}
+
+@media (--viewport-mini) {
+    .pr-footer__top {
+        grid-gap: calc(var(--layoutBlankSize) + 10px) var(--layoutBlankSize);
+        grid-template-areas:
+            "introduction"
+            "contace"
+            "posts"
+            "links";
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, auto);
+    }
+}
+
+@media (--viewport-small) {
+    .pr-footer__top {
+        grid-gap: calc(var(--layoutBlankSize) + 10px) var(--layoutBlankSize);
+        grid-template-areas:
+            "introduction contace"
+            "posts links";
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, auto);
+    }
+}

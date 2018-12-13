@@ -1,0 +1,14 @@
+{
+    "extends": "./node_modules/@yzfe/vuepress-plugin-typescript/tsconfig",
+    "compilerOptions": {
+        "module": "commonjs",
+        "baseUrl": "./src",
+        "outDir": "./dist",
+        "types": ["node", "date-fns"],
+        "typeRoots": ["typings"]
+    },
+    "include": [
+        "src/*.ts",
+        "typings/*.ts"
+    ]
+}

@@ -1,0 +1,127 @@
+@import "var.pcss";
+
+.pr-header-wrap {
+    position: relative;
+}
+
+.pr-header {
+    position: relative;
+    z-index: var(--zIndexTop);
+    display: flex;
+    height: 100px;
+    align-items: center;
+    border-bottom: var(--borderWidth) solid var(--borderColor);
+    background: #fff;
+    background-color: var(--headerBgColor);
+
+    &:matches(::after, ::before) {
+        position: absolute;
+        z-index: 1;
+        top: 0;
+        display: block;
+        width: calc(50vw - 50% + 1px);
+        height: calc(100% + 1px);
+        border-bottom: var(--borderWidth) solid var(--borderColor);
+        background-color: var(--headerBgColor);
+        content: "";
+    }
+
+    &::before {
+        left: 100%;
+    }
+
+    &::after {
+        right: 100%;
+    }
+
+    &--before-enter {
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+
+    &--sticky {
+        height: 60px;
+        opacity: 1;
+        transform: translateY(0);
+        transition: transform 0.5s ease 0.1s, opacity 0.6s ease;
+    }
+
+    &--has-banner:not(.pr-header--sticky) {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        border-bottom: 0;
+        background-color: transparent;
+
+        &::before,
+        &::after {
+            border-bottom: 0;
+            background-color: transparent;
+        }
+
+        /deep/ {
+            .popup-menu__icon,
+            .search__icon {
+                color: #fff;
+
+                &:hover {
+                    color: var(--themeColor);
+                }
+            }
+
+            .pr-header__popup-menu {
+                .popup-menu__list {
+                    border-bottom: 0;
+                    background: linear-gradient(
+                        to bottom,
+                        transparent,
+                        #6d8e88
+                    );
+
+                    .pr-link {
+                        color: #fff;
+                        font-weight: normal;
+
+                        &:hover {
+                            color: var(--themeColor);
+                        }
+                    }
+                }
+            }
+
+            .pr-header__menu {
+                .pr-link {
+                    color: #fff;
+                    font-weight: normal;
+
+                    &:hover {
+                        color: var(--themeColor);
+                    }
+                }
+            }
+        }
+    }
+
+    &__main {
+        flex: 1 0 0;
+    }
+
+    &__popup-menu {
+        display: none;
+    }
+}
+
+@media (--viewport-mini) {
+    .pr-header {
+        height: 60px;
+
+        &__menu {
+            display: none;
+        }
+
+        &__popup-menu {
+            display: block;
+        }
+    }
+}

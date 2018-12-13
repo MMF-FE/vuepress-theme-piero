@@ -1,0 +1,21 @@
+{
+    "name": "example-blog",
+    "version": "0.0.1",
+    "description": "the example for theme-blog",
+    "main": "index.js",
+    "author": "minfive <chenxiaowu1994@outlook.com> (http://blog.minfive.com/)",
+    "license": "MIT",
+    "private": true,
+    "scripts": {
+        "dev": "vuepress dev src --open",
+        "build": "vuepress build src"
+    },
+    "dependencies": {
+        "@yzfe/vuepress-theme-piero-blog": "^0.0.1",
+        "ts-loader": "^5.3.1",
+        "vuepress": "^1.0.0-alpha.47"
+    },
+    "devDependencies": {
+        "typescript": "^3.2.1"
+    }
+}

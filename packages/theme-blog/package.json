@@ -1,0 +1,36 @@
+{
+    "name": "@yzfe/vuepress-theme-piero-blog",
+    "version": "0.0.1",
+    "description": "the vuepress blog theme for theme piero",
+    "main": "index.js",
+    "author": "minfive <chenxiaowu1994@outlook.com> (http://blog.minfive.com/)",
+    "license": "MIT",
+    "private": false,
+    "scripts": {
+        "alias": "node ./scripts/process-ts-config"
+    },
+    "dependencies": {
+        "@vssue/api-github-v3": "^0.6.0",
+        "@vuepress/plugin-blog": "^1.0.0-alpha.47",
+        "@vuepress/plugin-pagination": "^1.0.0-alpha.47",
+        "@yzfe/vuepress-plugin-typescript": "^0.0.1",
+        "@yzfe/vuepress-plugin-blog-archive": "^0.0.1",
+        "@yzfe/vuepress-theme-piero-core": "^0.0.1",
+        "date-fns": "^1.29.0",
+        "medium-zoom": "^1.0.4",
+        "mermaid": "^8.0.0",
+        "vssue": "^0.7.1",
+        "vue": "^2.5.17",
+        "vue-property-decorator": "^7.2.0",
+        "vue-svgicon": "^3.2.1",
+        "vuepress": "^1.0.0-alpha.47"
+    },
+    "devDependencies": {
+        "copy-webpack-plugin": "^4.6.0",
+        "cssnano": "^4.1.7",
+        "postcss-import": "^12.0.1",
+        "postcss-nested": "^4.1.0",
+        "postcss-preset-env": "^6.4.0",
+        "typescript": "^3.1.6"
+    }
+}

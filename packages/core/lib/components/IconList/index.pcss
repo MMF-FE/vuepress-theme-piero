@@ -1,0 +1,30 @@
+.pr-icon-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.list__col {
+    display: flex;
+    width: 100px;
+    height: 100px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.col {
+    &__icon {
+        width: 24px;
+        height: 24px;
+        cursor: pointer;
+        transition: transform 0.3s;
+
+        &:hover {
+            transform: scale(1.4);
+        }
+    }
+
+    &__text {
+    }
+}

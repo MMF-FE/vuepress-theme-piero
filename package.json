@@ -1,0 +1,63 @@
+{
+    "private": true,
+    "name": "vuepress-theme-piero",
+    "version": "0.0.1",
+    "description": "vuepress series theme",
+    "main": "index.js",
+    "author": "minfive <chenxiaowu1994@outlook.com> (http://blog.minfive.com/)",
+    "license": "MIT",
+    "scripts": {
+        "lint": "eslint --ext .js,.ts,.vue --cache .",
+        "build": "lerna run build --parallel --scope '@yzfe/vuepress-plugin-*'",
+        "dev": "lerna run dev --parallel --scope '@yzfe/vuepress-plugin-*'",
+        "dev:blog": "yarn build && yarn workspace example-blog dev",
+        "dev:doc": "yarn build && yarn workspace example-doc dev"
+    },
+    "husky": {
+        "hooks": {
+            "pre-commit": "lint-staged"
+        }
+    },
+    "lint-staged": {
+        "*.vue": [
+            "stylelint --fix",
+            "git add"
+        ],
+        "*.{js,ts,vue}": [
+            "eslint --cache --fix",
+            "git add"
+        ],
+        "*.pcss": [
+            "prettier-stylelint --write",
+            "git add"
+        ]
+    },
+    "workspaces": {
+        "packages": [
+            "packages/*"
+        ],
+        "nohoist": [
+            "**/@yzfe/vuepress-plugin-typescript",
+            "**/@yzfe/vuepress-plugin-blog-archive",
+            "**/@yzfe/vuepress-theme-piero-core"
+        ]
+    },
+    "devDependencies": {
+        "@typescript-eslint/eslint-plugin": "^1.4.2",
+        "@typescript-eslint/parser": "^1.4.2",
+        "eslint": "^5.15.1",
+        "eslint-config-prettier": "^4.1.0",
+        "eslint-plugin-prettier": "^3.0.1",
+        "eslint-plugin-vue": "^5.2.2",
+        "husky": "^1.2.1",
+        "lerna": "^3.4.3",
+        "lint-staged": "^8.1.0",
+        "prettier": "^1.15.2",
+        "prettier-stylelint": "^0.4.2",
+        "stylelint": "^10.0.1",
+        "stylelint-config-idiomatic-order": "^6.2.0",
+        "stylelint-config-standard": "^18.3.0",
+        "ts-node": "^7.0.1",
+        "typescript": "^3.1.6"
+    }
+}

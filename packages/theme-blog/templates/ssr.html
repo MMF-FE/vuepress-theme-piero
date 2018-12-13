@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="{{ lang }}">
+    <head>
+        <meta charset="utf-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+        />
+        <title>{{ title }}</title>
+        <meta name="description" content="{{ description }}" />
+        {{{ userHeadTags }}}
+        {{{ pageMeta }}}
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.css">
+        {{{ renderResourceHints() }}}
+        {{{ renderStyles() }}}
+    </head>
+    <body>
+        <!--vue-ssr-outlet-->
+        {{{ renderScripts() }}}
+    </body>
+</html>

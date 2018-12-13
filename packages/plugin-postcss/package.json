@@ -1,0 +1,18 @@
+{
+    "name": "@yzfe/vuepress-plugin-postcss",
+    "version": "0.0.1",
+    "description": "the postcss plugin for vuepress",
+    "main": "dist/index.js",
+    "author": "minfive <chenxiaowu1994@outlook.com> (http://blog.minfive.com/)",
+    "license": "MIT",
+    "private": false,
+    "scripts": {
+        "build": "rm -rf dist && tsc",
+        "dev": "rm -rf dist && tsc -w"
+    },
+    "devDependencies": {
+        "@yzfe/vuepress-plugin-typescript": "^0.0.1",
+        "@types/node": "^10.12.12",
+        "typescript": "^3.2.1"
+    }
+}

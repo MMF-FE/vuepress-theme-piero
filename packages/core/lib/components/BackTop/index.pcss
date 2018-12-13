@@ -1,0 +1,23 @@
+@import "var.pcss";
+
+.pr-back-top {
+    display: flex;
+    width: 46px;
+    height: 46px;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #e8e8e8;
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    color: #b0b0b0;
+    transition: color 0.2s ease, background-color 0.2s ease;
+
+    &:hover {
+        background-color: rgba(0, 0, 0, 0.6);
+        color: #fff;
+    }
+
+    &.back-top {
+        z-index: var(--zIndexTop);
+    }
+}

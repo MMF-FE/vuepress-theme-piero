@@ -1,0 +1,50 @@
+/* 基本样式覆盖 */
+@custom-selector :--header h1, h2, h3, h4, h5, h6;
+
+:matches(html, body) {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    color: var(--mainFontColor);
+    font-family: var(--mainFontFamily);
+    font-size: var(--mainFontSize);
+    font-weight: var(--mainFontWidth);
+    letter-spacing: 0.6px;
+    line-height: var(--mainFontLineHeight);
+
+    * {
+        box-sizing: border-box;
+
+        &:matches(::after, ::before) {
+            box-sizing: border-box;
+        }
+    }
+}
+
+:--header {
+    margin: 0 0 10px 0;
+    font-family: var(--titleFontFamily);
+    font-weight: 400;
+    letter-spacing: 1px;
+    line-height: 1.5;
+    padding-inline: 0;
+    text-transform: uppercase;
+}
+
+input {
+    display: inline-block;
+    padding: 9px;
+    font-family: inherit;
+    font-size: inherit;
+    letter-spacing: 0.5px;
+    line-height: inherit;
+    outline: none;
+}
+
+:matches(ul, ul) {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}

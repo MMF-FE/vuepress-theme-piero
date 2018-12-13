@@ -1,0 +1,9 @@
+{
+    "name": "@yzfe/vuepress-plugin-back-top",
+    "version": "0.0.1",
+    "description": "the vuepress plugin for piero theme",
+    "main": "src/index.js",
+    "author": "minfive <chenxiaowu1994@outlook.com> (http://blog.minfive.com/)",
+    "license": "MIT",
+    "private": false
+}

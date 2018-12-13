@@ -1,0 +1,14 @@
+@import "var.pcss";
+
+.pr-comment {
+    margin-top: 2em;
+    margin-bottom: 70px;
+
+    /deep/ {
+        :not(.vssue-comment-content) {
+            a {
+                font-weight: inherit;
+            }
+        }
+    }
+}

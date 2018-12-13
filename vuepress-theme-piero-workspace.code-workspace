@@ -1,0 +1,88 @@
+{
+    "folders": [
+        {
+            "path": "."
+        },
+        {
+            "path": "packages/example-blog"
+        },
+        {
+            "path": "packages/example-doc"
+        },
+        {
+            "path": "packages/plugin-back-top"
+        },
+        {
+            "path": "packages/plugin-blog-archive"
+        },
+        {
+            "path": "packages/plugin-postcss"
+        },
+        {
+            "path": "packages/plugin-typescript"
+        },
+        {
+            "path": "packages/plugin-markdown"
+        },
+        {
+            "path": "packages/plugin-flexsearch"
+        },
+        {
+            "path": "packages/core"
+        },
+        {
+            "path": "packages/theme-blog"
+        },
+        {
+            "path": "packages/theme-doc"
+        }
+    ],
+    "extensions": {
+        "recommendations": [
+            "pmneo.tsimporter",
+            "eg2.tslint",
+            "prograhammer.tslint-vue",
+            "octref.vetur",
+            "esbenp.prettier-vscode",
+            "ricard.postcss",
+            "eamodio.gitlens",
+            "shinnn.stylelint"
+        ]
+    },
+    "settings": {
+        "editor.formatOnSave": true,
+        "[javascript]": {
+            "editor.formatOnSave": false
+        },
+        "[vue]": {
+            "editor.formatOnSave": false
+        },
+        "[typescript]": {
+            "editor.formatOnSave": false
+        },
+        "eslint.autoFixOnSave": true,
+        "eslint.validate": [
+            { "language": "javascript", "autoFix": true },
+            { "language": "typescript", "autoFix": true },
+            { "language": "vue", "autoFix": true },
+            { "language": "html", "autoFix": true }
+        ],
+        "typescript.tsserver.log": "verbose",
+        "prettier.requireConfig": true,
+        "prettier.stylelintIntegration": true,
+        "vetur.format.options.tabSize": 4,
+        "files.associations": {
+            "*.vue": "vue"
+        },
+        "files.exclude": {
+            "**/.git": true,
+            "**/.svn": true,
+            "**/.hg": true,
+            "**/CVS": true,
+            "**/.DS_Store": true,
+            "**/*.map": true,
+            // "**/node_modules": true,
+            "packages": true
+        }
+    }
+}
